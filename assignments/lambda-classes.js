@@ -45,3 +45,19 @@ class Student extends Person {
     console.log(`${this.name} begins working hard on ${subject}`);
   }
 }
+
+class ProjectManager extends Instructor {
+  constructor(props) {
+    super(props);
+    this.gradClassName = props.gradClassName;
+    this.favInstructor = props.favInstructor;
+  }
+
+  standUp(channel) {
+    console.log(`${this.name} announces to ${channel}, @channel standby time!`);
+  }
+
+  debugsCode(student, subject) {
+    console.log(`${this.name} debugs ${student.name}'s code on ${subject}`);
+  }
+}
